@@ -20,9 +20,9 @@ char *funcoes_str[] = {
 	"dir",
 	"mostra",
 	"espera",
-	"pausa"
+	"pausa",
 	"tempo",
-	"agora"
+	"agora",
 	"imprime",
 	"executa",
 	"sair"
