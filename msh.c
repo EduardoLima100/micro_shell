@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,9 +17,12 @@ int msh_sair(char **args);		//exit
 
 char *funcoes_str[] = {
 	"lista",
+	"dir",
 	"mostra",
 	"espera",
+	"pausa"
 	"tempo",
+	"agora"
 	"imprime",
 	"executa",
 	"sair"
@@ -26,8 +30,11 @@ char *funcoes_str[] = {
 
 int (*funcoes_end[])(char **) = {
 	&msh_lista,
+	&msh_lista,
 	&msh_mostra,
 	&msh_espera,
+	&msh_espera,
+	&msh_tempo,
 	&msh_tempo,
 	&msh_imprime,
 	&msh_executa,
