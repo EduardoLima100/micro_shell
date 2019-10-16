@@ -304,7 +304,7 @@ void repeticao(void)
 
 		if(status)
 		{
-			printf(args);
+			printf(args[0]);
 		}
 
 		free(linha);
