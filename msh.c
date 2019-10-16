@@ -8,6 +8,7 @@
 #include <sys/types.h>
 
 int msh_lista(char **args);		//ls
+int msh_historico(char **args); 
 int msh_mostra(char **args);	//cat
 int msh_espera(char **args);	//sleep()
 int msh_tempo(char **args);		//date
@@ -18,6 +19,7 @@ int msh_sair(char **args);		//exit
 char *funcoes_str[] = {
 	"lista",
 	"dir",
+	"historico",
 	"mostra",
 	"espera",
 	"pausa",
@@ -31,6 +33,7 @@ char *funcoes_str[] = {
 int (*funcoes_end[])(char **) = {
 	&msh_lista,
 	&msh_lista,
+	&msh_historico,
 	&msh_mostra,
 	&msh_espera,
 	&msh_espera,
@@ -65,6 +68,11 @@ int msh_lista(char** args)
   	}
 	
 	return 1;
+}
+
+int msh_historico(char** args)
+{
+
 }
 
 int msh_mostra(char** args)
@@ -293,6 +301,11 @@ void repeticao(void)
 		linha = ler_linha();
 		args = separa_liha(linha);
 		status = executar(args);
+
+		if(status)
+		{
+			print(args);
+		}
 
 		free(linha);
 		free(args);
