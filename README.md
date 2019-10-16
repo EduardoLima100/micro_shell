@@ -4,23 +4,26 @@ O objetivo deste trabalho é implementar um micro shell para sistemas Linux cham
 
 Os comandos desenvolvimentos:
 
-- lista:
-chama o comando listar (/bin/ls). Pode ter um argumento com o nome do diretório.
+- lista ou dir:
+Chama o comando listar (/bin/ls). Pode ter um argumento com o nome do diretório.
+
+- historico:
+Mostra o histórico dos últimos dez comandos.
 
 - mostra:
-mostra o conteúdo de um arquivo com o programa cat (/bin/cat). Recebe como argumento o nome do arquivo.
+Mostra o conteúdo de um arquivo com o programa cat (/bin/cat). Recebe como argumento o nome do arquivo.
 
-- espera:
-tem como argumento o tempo em segundos que deve esperar antes de continuar. Deve-se utilizar a função sleep().
+- espera ou pausa:
+Tem como argumento o tempo em segundos que deve esperar antes de continuar.
 
-- tempo:
-mostra data e hora usando o comando date.
+- tempo ou agora:
+Mostra data e hora usando o comando date.
 
 - imprime:
-apenas imprime na tela o conteúdo do argumento, semelhante ao comando echo.
+Apenas imprime na tela o conteúdo do argumento, semelhante ao comando echo.
 
 - executa:
-recebe como argumento o programa a ser executado.
+Recebe como argumento o programa a ser executado.
 
 - sair:
-termina o programa com a função exit().
+Termina o programa com a função exit().
