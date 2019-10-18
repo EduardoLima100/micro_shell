@@ -71,7 +71,7 @@ int msh_lista(char** args)
 	return 1;
 }
 
-int msh_historico(char** args)
+int msh_historico(void)
 {
 	int i;
 	for(i=0;i<10;i++)
