@@ -8,7 +8,7 @@
 #include <sys/types.h>
 
 int msh_lista(char **args);		//ls
-int msh_historico(char **args); 
+int msh_historico(void); 
 int msh_mostra(char **args);	//cat
 int msh_espera(char **args);	//sleep()
 int msh_tempo(char **args);		//date
