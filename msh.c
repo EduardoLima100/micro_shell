@@ -73,6 +73,7 @@ int msh_lista(char** args)
 
 int msh_historico(char** args)
 {
+	int i;
 	for(i=0;i<10;i++)
 	{
 		printf(HIST[i]);
