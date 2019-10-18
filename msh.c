@@ -75,7 +75,8 @@ int msh_historico(char** args)
 {
 	for(i=0;i<10;i++)
 	{
-		print(HIST[i] + "\n");
+		printf(HIST[i]);
+		printf("\n");
 	}
 }
 
