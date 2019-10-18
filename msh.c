@@ -15,6 +15,7 @@ int msh_tempo(char **args);		//date
 int msh_imprime(char **args);	//echo
 int msh_executa(char **args);	
 int msh_sair(char **args);		//exit
+char HIST = [NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL];
 
 char *funcoes_str[] = {
 	"lista",
@@ -307,8 +308,7 @@ void repeticao(void)
 
 		if(status)
 		{
-			i = 0;
-			f = 0;
+			int i = 0, f = 0;
 			while(i<10 && f==0)
 			{
 				if(HIST[i] == NULL){
@@ -330,7 +330,7 @@ void repeticao(void)
 	}while(status);
 }
 
-char HIST = [NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL]
+
 int main(int argc, char **argv)
 {
 	repeticao();
