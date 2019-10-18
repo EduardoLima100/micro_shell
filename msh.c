@@ -72,7 +72,10 @@ int msh_lista(char** args)
 
 int msh_historico(char** args)
 {
-
+	for(i=0;i<10;i++)
+	{
+		print(HIST[i] + "\n");
+	}
 }
 
 int msh_mostra(char** args)
@@ -304,8 +307,22 @@ void repeticao(void)
 
 		if(status)
 		{
-			printf(linha);
-			printf("\n");	
+			i = 0;
+			f = 0;
+			while(i<10 && f==0)
+			{
+				if(HIST[i] == NULL){
+					HIST[i] = linha;
+					f = 1;
+				}
+				i = i+1;
+			}
+			if(f == 0){
+				for(i=0;i<9;i++){
+					HIST[i] = HIST[i+1];
+				}
+				HIST[9] = linha;
+			}
 		}
 
 		free(linha);
@@ -313,6 +330,7 @@ void repeticao(void)
 	}while(status);
 }
 
+char HIST = [NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL]
 int main(int argc, char **argv)
 {
 	repeticao();
