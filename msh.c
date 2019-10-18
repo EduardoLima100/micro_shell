@@ -15,7 +15,7 @@ int msh_tempo(char **args);		//date
 int msh_imprime(char **args);	//echo
 int msh_executa(char **args);	
 int msh_sair(char **args);		//exit
-char HIST = [NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL];
+char HIST[10] = [NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL];
 
 char *funcoes_str[] = {
 	"lista",
