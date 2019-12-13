@@ -82,6 +82,7 @@ int msh_historico(void)
 			printf("\n");
 		}
 	}
+	return 1;
 }
 
 int msh_mostra(char** args)
